@@ -22,7 +22,7 @@ import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Agencia;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Banco;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.CodigoDeCompensacaoBACEN;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeTitulo;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
@@ -51,7 +51,7 @@ public class MeuPrimeiroBoletoSicredi {
 		//SOBREpondo a Logo do banco:
 		banco.setImgLogo(new ImageIcon("desenvolvimento/SICREDI/Template/Imagens/LogoSicredi.PNG").getImage());
 		
-		ContaBancaria contaBancariaCed = new ContaBancaria(banco);
+		ContaBancariaBoleto contaBancariaCed = new ContaBancariaBoleto(banco);
 		contaBancariaCed.setAgencia(new Agencia(123, "6"));
 		contaBancariaCed.setCarteira(new Carteira(5));
 		contaBancariaCed.setNumeroDaConta(new NumeroDaConta(7891, "0"));

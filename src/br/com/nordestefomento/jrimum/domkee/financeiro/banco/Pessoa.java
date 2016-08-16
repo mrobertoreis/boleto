@@ -38,7 +38,7 @@ import java.util.Collection;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.contato.NumeroDeTelefone;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.Endereco;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.id.cprf.AbstractCPRF;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.utilix.ObjectUtil;
 
 
@@ -90,9 +90,9 @@ public class Pessoa implements br.com.nordestefomento.jrimum.domkee.comum.pessoa
 	private Collection<Endereco> enderecos;
 	
 	/**
-	 * @see ContaBancaria
+	 * @see ContaBancariaBoleto
 	 */
-	private Collection<ContaBancaria> contasBancarias;
+	private Collection<ContaBancariaBoleto> contasBancarias;
 	
 	public Pessoa() {}
 	
@@ -108,13 +108,13 @@ public class Pessoa implements br.com.nordestefomento.jrimum.domkee.comum.pessoa
 	}
 
 	/**
-	 * @see ContaBancaria
+	 * @see ContaBancariaBoleto
 	 */
 	
-	public void addContaBancaria(ContaBancaria contaBancaria) {
+	public void addContaBancaria(ContaBancariaBoleto contaBancaria) {
 		
 		if(isNull(contasBancarias))
-			contasBancarias = new ArrayList<ContaBancaria>();
+			contasBancarias = new ArrayList<ContaBancariaBoleto>();
 		
 		contasBancarias.add(contaBancaria);
 	}
@@ -122,7 +122,7 @@ public class Pessoa implements br.com.nordestefomento.jrimum.domkee.comum.pessoa
 	/** 
 	 * Verifica se esta pessoa tem alguma conta bancária.
 	 * 
-	 * @see ContaBancaria
+	 * @see ContaBancariaBoleto
 	 */
 	
 	public boolean hasContaBancaria(){
@@ -161,11 +161,11 @@ public class Pessoa implements br.com.nordestefomento.jrimum.domkee.comum.pessoa
 	}
 
 	/**
-	 * @see ContaBancaria
+	 * @see ContaBancariaBoleto
 	 * @see Collection
 	 */
 	
-	public Collection<ContaBancaria> getContasBancarias() {
+	public Collection<ContaBancariaBoleto> getContasBancarias() {
 
 		return contasBancarias;
 	}
@@ -202,10 +202,10 @@ public class Pessoa implements br.com.nordestefomento.jrimum.domkee.comum.pessoa
 	}
 
 	/**
-	 * @see ContaBancaria
+	 * @see ContaBancariaBoleto
 	 * @see Collection
 	 */
-	public void setContasBancarias(Collection<ContaBancaria> contasBancarias) {
+	public void setContasBancarias(Collection<ContaBancariaBoleto> contasBancarias) {
 		
 		this.contasBancarias = contasBancarias;
 	}

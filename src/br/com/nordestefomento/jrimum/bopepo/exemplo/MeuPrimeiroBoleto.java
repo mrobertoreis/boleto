@@ -16,7 +16,7 @@ import br.com.nordestefomento.jrimum.domkee.financeiro.banco.DadoBancario;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Agencia;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeCobranca;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeTitulo;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Modalidade;
@@ -50,14 +50,14 @@ public class MeuPrimeiroBoleto {
 		
 		// Informando dados sobre a conta bancária do cendente.		
 		Banco banco = BancoSuportado.NOSSA_CAIXA.create();
-		ContaBancaria contaBancariaCed = new ContaBancaria(banco);
+		ContaBancariaBoleto contaBancariaCed = new ContaBancariaBoleto(banco);
 		contaBancariaCed.setBanco(banco);
 		contaBancariaCed.setNumeroDaConta(new NumeroDaConta(123456, "0"));
 		contaBancariaCed.setCarteira(new Carteira(123, TipoDeCobranca.SEM_REGISTRO));
 		contaBancariaCed.setModalidade(new Modalidade(4));
 		contaBancariaCed.setAgencia(new Agencia(1234, "1"));
 		cedente.addContaBancaria(contaBancariaCed);		
-		
+	
 		/* 
 		 * INFORMANDO DADOS SOBRE O SACADO.
 		 * */

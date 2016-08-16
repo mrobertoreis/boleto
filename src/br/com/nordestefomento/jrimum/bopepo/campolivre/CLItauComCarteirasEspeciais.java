@@ -30,7 +30,7 @@
 
 package br.com.nordestefomento.jrimum.bopepo.campolivre;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.Field;
 import br.com.nordestefomento.jrimum.utilix.Filler;
@@ -130,7 +130,7 @@ class CLItauComCarteirasEspeciais extends AbstractCLItau {
 	public CLItauComCarteirasEspeciais(Titulo titulo) {
 		super(FIELDS_LENGTH, STRING_LENGTH);
 		
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		
 		this.add(new Field<Integer>(conta.getCarteira().getCodigo(), 3, Filler.ZERO_LEFT));
 		this.add(new Field<String>(titulo.getNossoNumero(), 8, Filler.ZERO_LEFT));

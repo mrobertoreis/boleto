@@ -127,9 +127,9 @@ public final class Titulo {
 	private String digitoDoNossoNumero;
 	
 	/**
-	 * @see #setContaBancaria(ContaBancaria)
+	 * @see #setContaBancaria(ContaBancariaBoleto)
 	 */
-	private ContaBancaria contaBancaria;
+	private ContaBancariaBoleto contaBancaria;
 
 	/**
 	 * @see #setCedente(Pessoa)
@@ -195,13 +195,13 @@ public final class Titulo {
 	 * Cria um título sem sacador avalista.
 	 * </p>
 	 */
-	public Titulo(ContaBancaria contaBancaria, Pessoa sacado, Pessoa cedente) throws JRimumException {
+	public Titulo(ContaBancariaBoleto contaBancaria, Pessoa sacado, Pessoa cedente) throws JRimumException {
 		this.setContaBancaria(contaBancaria);
 		this.setSacado(sacado);
 		this.setCedente(cedente);
 	}
 	
-	public Titulo(ContaBancaria contaBancaria, Pessoa sacado, Pessoa cedente, Pessoa sacadorAvalista) throws JRimumException {
+	public Titulo(ContaBancariaBoleto contaBancaria, Pessoa sacado, Pessoa cedente, Pessoa sacadorAvalista) throws JRimumException {
 		this(contaBancaria, sacado, cedente);
 		this.setSacadorAvalista(sacadorAvalista);
 	}
@@ -403,11 +403,11 @@ public final class Titulo {
 	}
 	
 	/**
-	 * @see #setContaBancaria(ContaBancaria)
+	 * @see #setContaBancaria(ContaBancariaBoleto)
 	 * 
 	 * @return the contaBancaria
 	 */
-	public ContaBancaria getContaBancaria() {
+	public ContaBancariaBoleto getContaBancaria() {
 		return contaBancaria;
 	}
 
@@ -418,7 +418,7 @@ public final class Titulo {
 	 * 
 	 * @param contaBancaria the contaBancaria to set
 	 */
-	public void setContaBancaria(ContaBancaria contaBancaria)
+	public void setContaBancaria(ContaBancariaBoleto contaBancaria)
 			throws JRimumException {
 		
 		if (isNotNull(contaBancaria)) {

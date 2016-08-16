@@ -30,7 +30,7 @@
 
 package br.com.nordestefomento.jrimum.bopepo.campolivre;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.Field;
 import br.com.nordestefomento.jrimum.utilix.Filler;
@@ -113,7 +113,7 @@ class CLBradesco extends AbstractCLBradesco {
 	CLBradesco(Titulo titulo){
 		super(FIELDS_LENGTH, STRING_LENGTH);
 		
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		String nossoNumero = titulo.getNossoNumero();
 		
 		this.add(new Field<Integer>(conta.getAgencia().getCodigo(), 4, Filler.ZERO_LEFT));

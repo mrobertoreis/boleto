@@ -32,7 +32,7 @@ package br.com.nordestefomento.jrimum.bopepo.campolivre;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.Field;
 import br.com.nordestefomento.jrimum.utilix.Filler;
@@ -104,7 +104,7 @@ class CLMercantilDoBrasil extends AbstractCLMercantilDoBrasil {
 	CLMercantilDoBrasil(Titulo titulo) {
 		super(FIELDS_LENGTH, STRING_LENGTH);
 		
-		ContaBancaria contaBancaria = titulo.getContaBancaria();
+		ContaBancariaBoleto contaBancaria = titulo.getContaBancaria();
 		
 //		int digitoDoNossoNumero = calculeDigitoVerificadorDoNossoNumero(contaBancaria.getAgencia().getCodigoDaAgencia(), nossoNumero);
 		

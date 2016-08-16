@@ -29,7 +29,7 @@
  */
 package br.com.nordestefomento.jrimum.bopepo.campolivre;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.Field;
 import br.com.nordestefomento.jrimum.utilix.Filler;
@@ -158,7 +158,7 @@ class CLNossaCaixa extends AbstractCLNossaCaixa {
 
 		super(FIELDS_LENGTH, STRING_LENGTH);
 		
-		ContaBancaria contaBancaria = titulo.getContaBancaria();
+		ContaBancariaBoleto contaBancaria = titulo.getContaBancaria();
 		Integer modalidadeContaConvertida = convertaModalidadeDaConta(contaBancaria.getModalidade().getCodigoAsInteger());
 		
 		this.add(new Field<Integer>(getIdentificacaoDoSistemaPeloNossoNumero(titulo.getNossoNumero()), 1));

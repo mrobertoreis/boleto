@@ -36,7 +36,7 @@ import static br.com.nordestefomento.jrimum.utilix.ObjectUtil.isNull;
 import org.apache.log4j.Logger;
 
 import br.com.nordestefomento.jrimum.bopepo.BancoSuportado;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.ObjectUtil;
 import br.com.nordestefomento.jrimum.utilix.AbstractLineOfFields;
@@ -95,7 +95,7 @@ abstract class AbstractCampoLivre extends AbstractLineOfFields implements CampoL
 			log.debug("titulo instance : " + titulo);
 
 		CampoLivre campoLivre = null;
-		ContaBancaria contaBancaria = null;
+		ContaBancariaBoleto contaBancaria = null;
 		BancoSuportado enumBanco = null;
 		
 		try{
@@ -220,7 +220,7 @@ abstract class AbstractCampoLivre extends AbstractLineOfFields implements CampoL
 	 * 
 	 * @since 0.2
 	 */
-	private static boolean isContaBacariaOK(ContaBancaria conta) {
+	private static boolean isContaBacariaOK(ContaBancariaBoleto conta) {
 
 		return (isNotNull(conta, "contaBancaria")
 				&& isNotNull(conta.getBanco(), "Banco") && isCodigoDeCompensacaoOK(conta

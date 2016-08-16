@@ -386,9 +386,9 @@ public class Banco implements br.com.nordestefomento.jrimum.domkee.financeiro.ba
 	}
 
 	/**
-	 * @see Pessoa#addContaBancaria(ContaBancaria)
+	 * @see Pessoa#addContaBancaria(ContaBancariaBoleto)
 	 */
-	public void addContaBancaria(ContaBancaria contaBancaria) {
+	public void addContaBancaria(ContaBancariaBoleto contaBancaria) {
 		pessoaJuridica.addContaBancaria(contaBancaria);
 		
 	}
@@ -398,7 +398,7 @@ public class Banco implements br.com.nordestefomento.jrimum.domkee.financeiro.ba
 	 * @see Pessoa#getContasBancarias()
 	 */
 	
-	public Collection<ContaBancaria> getContasBancarias() {
+	public Collection<ContaBancariaBoleto> getContasBancarias() {
 		
 		return pessoaJuridica.getContasBancarias();
 	}
@@ -416,7 +416,7 @@ public class Banco implements br.com.nordestefomento.jrimum.domkee.financeiro.ba
 	 * @see br.com.nordestefomento.jrimum.domkee.comum.pessoa.Pessoa#setContasBancarias(java.util.Collection)
 	 */
 	
-	public void setContasBancarias(Collection<ContaBancaria> contasBancarias) {
+	public void setContasBancarias(Collection<ContaBancariaBoleto> contasBancarias) {
 		
 		pessoaJuridica.setContasBancarias(contasBancarias);
 	}

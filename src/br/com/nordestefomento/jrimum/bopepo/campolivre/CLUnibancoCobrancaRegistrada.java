@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.DateUtil;
 import br.com.nordestefomento.jrimum.utilix.Field;
@@ -96,7 +96,7 @@ class CLUnibancoCobrancaRegistrada extends AbstractCLUnibanco {
 	CLUnibancoCobrancaRegistrada(Titulo titulo) {
 		super(FIELDS_LENGTH, STRING_LENGTH);
 		
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		
 		this.add(new Field<String>(CODIGO_TRANSACAO, 2));
 		

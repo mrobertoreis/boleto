@@ -36,7 +36,7 @@ import java.util.Collection;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.contato.NumeroDeTelefone;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.Endereco;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.id.cprf.AbstractCPRF;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 
 /**
  * 
@@ -72,11 +72,11 @@ public interface Pessoa extends Serializable {
 
 	public void addEndereco(Endereco endereco);
 
-	public Collection<ContaBancaria> getContasBancarias();
+	public Collection<ContaBancariaBoleto> getContasBancarias();
 
-	public void setContasBancarias(Collection<ContaBancaria> contasBancarias);
+	public void setContasBancarias(Collection<ContaBancariaBoleto> contasBancarias);
 
-	public void addContaBancaria(ContaBancaria contaBancaria);
+	public void addContaBancaria(ContaBancariaBoleto contaBancaria);
 
 	public boolean isFisica();
 

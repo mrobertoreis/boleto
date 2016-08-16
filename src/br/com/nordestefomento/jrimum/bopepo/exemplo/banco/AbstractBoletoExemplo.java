@@ -40,7 +40,7 @@ import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.UnidadeFederat
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Agencia;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeTitulo;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
@@ -152,7 +152,7 @@ public abstract class AbstractBoletoExemplo {
 
 	private Titulo crieTitulo(Pessoa cedente, Pessoa sacado, Pessoa sacadorAvalista) {
 		
-		ContaBancaria contaBancariaDoCedente = cedente.getContasBancarias().iterator().next();
+		ContaBancariaBoleto contaBancariaDoCedente = cedente.getContasBancarias().iterator().next();
 		Titulo titulo = null;
 		
 		if (sacadorAvalista != null) {
@@ -179,7 +179,7 @@ public abstract class AbstractBoletoExemplo {
 		
 		Pessoa cedente = new Pessoa("PROJETO JRimum", "00.000.208/0001-00");
 	
-		ContaBancaria contaBancaria = new ContaBancaria(getBancoSuportado().create());
+		ContaBancariaBoleto contaBancaria = new ContaBancariaBoleto(getBancoSuportado().create());
 		
 		Agencia agencia = new Agencia(1234, "1");
 		contaBancaria.setAgencia(agencia);

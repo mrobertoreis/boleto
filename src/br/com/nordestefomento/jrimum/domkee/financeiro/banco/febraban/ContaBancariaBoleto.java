@@ -54,7 +54,7 @@ import br.com.nordestefomento.jrimum.utilix.ObjectUtil;
  * @see br.com.nordestefomento.jrimum.domkee.comum.pessoa.Pessoa
  * @see Banco
  */
-public class ContaBancaria {
+public class ContaBancariaBoleto {
 
 	private static final long serialVersionUID = 3409504109013559999L;
 
@@ -94,9 +94,9 @@ public class ContaBancaria {
 	private Modalidade modalidade;
 	
 	
-	public ContaBancaria() {}
+	public ContaBancariaBoleto() {}
 	
-	public ContaBancaria(Banco banco) {
+	public ContaBancariaBoleto(Banco banco) {
 		
 		this.banco = banco;
 	}

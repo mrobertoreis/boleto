@@ -32,6 +32,8 @@ package br.com.nordestefomento.jrimum.bopepo.exemplo.banco;
 import br.com.nordestefomento.jrimum.bopepo.BancoSuportado;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
 
+
+
 /**
  * 
  * <p>

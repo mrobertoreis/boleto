@@ -14,7 +14,7 @@ import br.com.nordestefomento.jrimum.domkee.financeiro.banco.DadoBancario;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Banco;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeMoeda;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeCobranca;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
@@ -48,7 +48,7 @@ public class MeuPrimeiroBoletoHsbcCNR {
 		
 		// Informando dados sobre a conta bancária do cendente.		
 		Banco banco = BancoSuportado.HSBC.create();
-		ContaBancaria contaBancariaCed = new ContaBancaria(banco);
+		ContaBancariaBoleto contaBancariaCed = new ContaBancariaBoleto(banco);
 		contaBancariaCed.setNumeroDaConta(new NumeroDaConta(1234567));
 		
 		Carteira carteira = new Carteira();

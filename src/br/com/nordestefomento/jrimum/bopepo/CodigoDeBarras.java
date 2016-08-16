@@ -39,7 +39,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
 import br.com.nordestefomento.jrimum.bopepo.campolivre.CampoLivre;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.BancoUtil;
 import br.com.nordestefomento.jrimum.utilix.Field;
@@ -213,7 +213,7 @@ public final class CodigoDeBarras extends AbstractLineOfFields{
 		add(valorNominalDoTitulo);
 		add(this.campoLivre);
 	
-		ContaBancaria contaBancaria = titulo.getContaBancaria();
+		ContaBancariaBoleto contaBancaria = titulo.getContaBancaria();
 		this.codigoDoBanco.setValue(contaBancaria.getBanco().getCodigoDeCompensacaoBACEN().getCodigoFormatado());
 		
 		this.codigoDaMoeda.setValue(titulo.getEnumMoeda().getCodigo());

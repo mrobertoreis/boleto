@@ -31,7 +31,7 @@
 package br.com.nordestefomento.jrimum.bopepo.campolivre;
 
 import br.com.nordestefomento.jrimum.bopepo.BancoSuportado;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeCobranca;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 
@@ -65,7 +65,7 @@ abstract class AbstractCLHSBC extends AbstractCampoLivre {
 
 	static CampoLivre create(Titulo titulo){
 		CampoLivre campoLivre = null;
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		
 		if (conta.getCarteira().getTipoCobranca() == TipoDeCobranca.SEM_REGISTRO) {
 			campoLivre = new CLHSBCCobrancaNaoRegistrada(titulo); 

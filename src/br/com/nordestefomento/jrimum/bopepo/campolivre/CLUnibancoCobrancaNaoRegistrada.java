@@ -4,7 +4,7 @@ import static br.com.nordestefomento.jrimum.utilix.ObjectUtil.isNotNull;
 
 import org.apache.commons.lang.StringUtils;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.utilix.Field;
 import br.com.nordestefomento.jrimum.utilix.Filler;
@@ -93,7 +93,7 @@ class CLUnibancoCobrancaNaoRegistrada extends AbstractCLUnibanco {
 	CLUnibancoCobrancaNaoRegistrada(Titulo titulo) {
 		super(FIELDS_LENGTH, STRING_LENGTH);
 
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		
 		this.add(new Field<Integer>(CODIGO_TRANSACAO, 1));
 		

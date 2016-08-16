@@ -46,7 +46,7 @@ import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.UnidadeFederat
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Agencia;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeTitulo;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
@@ -114,7 +114,7 @@ public class Util4Exemplos {
 		
 		Pessoa cedente = new Pessoa("Empresa Lucrativa para Todo Sempre Ilimitada", "00.000.208/0001-00");
 	
-		ContaBancaria contaBancaria = new ContaBancaria(BancoSuportado.BANCO_DO_BRASIL.create());
+		ContaBancariaBoleto contaBancaria = new ContaBancariaBoleto(BancoSuportado.BANCO_DO_BRASIL.create());
 		
 		contaBancaria.setAgencia(new Agencia(1234, "7"));
 		contaBancaria.setCarteira(new Carteira(5));

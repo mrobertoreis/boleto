@@ -33,7 +33,7 @@ package br.com.nordestefomento.jrimum.bopepo.campolivre;
 
 import java.util.Arrays;
 
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
 import br.com.nordestefomento.jrimum.vallia.digitoverificador.Modulo;
 
@@ -83,7 +83,7 @@ abstract class AbstractCLItau extends AbstractCampoLivre {
 	static CampoLivre create(Titulo titulo){
 		
 		CampoLivre campoLivre = null;
-		ContaBancaria conta = titulo.getContaBancaria();
+		ContaBancariaBoleto conta = titulo.getContaBancaria();
 		
 		/*
 		 * Se a carteira for especial, a forma de construir o campo livre será diferente.

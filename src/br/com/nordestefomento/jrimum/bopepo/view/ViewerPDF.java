@@ -53,7 +53,7 @@ import br.com.nordestefomento.jrimum.bopepo.BancoSuportado;
 import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.Endereco;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
 import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
-import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancariaBoleto;
 import br.com.nordestefomento.jrimum.utilix.DateUtil;
 import br.com.nordestefomento.jrimum.utilix.FileUtil;
 import br.com.nordestefomento.jrimum.utilix.MonetaryUtil;
@@ -786,7 +786,7 @@ class ViewerPDF {
 		// Através da conta bancária será descoberto a imagem que representa o
 		// banco, com base
 		// no código do banco.
-		ContaBancaria conta = boleto.getTitulo().getContaBancaria();
+		ContaBancariaBoleto conta = boleto.getTitulo().getContaBancaria();
 		Image imgLogoBanco = null;
 
 		if (isNotNull(conta.getBanco().getImgLogo())) {
@@ -906,7 +906,7 @@ class ViewerPDF {
 	
 	private void setCodigoBanco() throws IOException, DocumentException {
 
-		ContaBancaria conta = boleto.getTitulo().getContaBancaria();
+		ContaBancariaBoleto conta = boleto.getTitulo().getContaBancaria();
 		
 		String codigoCompensacao = conta.getBanco().getCodigoDeCompensacaoBACEN().getCodigoFormatado();
 		String digitoCompensacao = conta.getBanco().getCodigoDeCompensacaoBACEN().getDigito().toString();
@@ -918,7 +918,7 @@ class ViewerPDF {
 	private void setAgenciaCondigoCedente() throws IOException, DocumentException {
 
 		StringBuilder sb = new StringBuilder(StringUtils.EMPTY);
-		ContaBancaria conta = boleto.getTitulo().getContaBancaria();
+		ContaBancariaBoleto conta = boleto.getTitulo().getContaBancaria();
 
 		if (isNotNull(conta.getAgencia())) {
 			if (isNotNull(conta.getAgencia().getCodigo()))
