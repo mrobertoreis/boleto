@@ -32,7 +32,9 @@ package br.com.nordestefomento.jrimum.utilix;
 
 import static br.com.nordestefomento.jrimum.utilix.ObjectUtil.isNotNull;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+
+
 
 
 /**

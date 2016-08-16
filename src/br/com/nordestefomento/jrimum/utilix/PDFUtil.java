@@ -90,7 +90,7 @@ public class PDFUtil {
 
 		// Ajustando o tamanho da imagem de acordo com o tamanho do campo.
 		// image.scaleToFit(rect.getWidth(), rect.getHeight());
-		image.scaleAbsolute(rect.getWidth(), rect.getHeight());
+		image.scaleAbsolute(rect.width(), rect.height());
 
 		// A rotina abaixo tem por objetivo deixar a imagem posicionada no
 		// centro
@@ -100,9 +100,9 @@ public class PDFUtil {
 		// "image.setAbsolutePosition
 		// (rect.getLowerLeftX(),rect.getLowerLeftY());"
 		image.setAbsolutePosition(rect.getLowerLeftX()
-				+ (rect.getWidth() - image.getScaledWidth()) / 2, rect
+				+ (rect.width() - image.scaledWidth()) / 2, rect
 				.getLowerLeftY()
-				+ (rect.getHeight() - image.getScaledHeight()) / 2);
+				+ (rect.height() - image.scaledHeight()) / 2);
 
 		// cb = stamper.getUnderContent(rect.getPage());
 		stamper.getOverContent(rect.getPage()).addImage(image);
